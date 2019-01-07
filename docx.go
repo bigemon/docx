@@ -167,7 +167,7 @@ func (d *Docx) replaceMatchTextBlocks(mlistArray [][]matchInfo, newString string
 				firstBlock = false
 				lastMatchIndex := strings.LastIndex(matchStr, curSubStr)
 				if lastMatchIndex == -1 {
-					fmt.Println("WTF")
+					// fmt.Println("WTF")
 					return "<w:t></w:t>"
 				}
 				ret := "<w:t>" +
@@ -190,7 +190,7 @@ func (d *Docx) replaceMatchTextBlocks(mlistArray [][]matchInfo, newString string
 			//部分匹配时(比如 <w:t>hello</w:t> 匹配 hel ,要替换为 fuck)
 			matchIndex := strings.Index(matchStr, curSubStr)
 			if matchIndex == -1 {
-				fmt.Println("WTF")
+				// fmt.Println("WTF2")
 				return "<w:t></w:t>"
 			}
 			lastText = "<w:t>" +
